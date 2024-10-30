@@ -1,0 +1,216 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+/* Container */
+.wpct-tab-container{
+    margin: 5% 10%;
+    /*background-color: #c1e3d9;*/
+    background-color: #c1e3d954;
+    padding: 3%;
+    border-radius: 4px;
+}
+
+/* TABs */
+.wpct-tab-menu{}
+.wpct-tab-menu ul{
+    margin: 0;
+    padding: 0;
+}
+.wpct-tab-menu ul li{
+    list-style-type: none;
+    display: inline-block;
+    line-height: 2;
+}
+.wpct-tab-menu ul li a{
+    text-decoration: none;
+    /*color: rgba(0,0,0,0.4);
+    background-color: #b4cbc4;*/
+    color: rgb(0 0 0 / 76%);
+    background-color: #95c5b6;
+    padding: 7px 25px;
+    border-radius: 4px;
+}
+.wpct-tab-menu ul li a.wpct-active-a{
+    /*background-color: #588d7d;*/
+    background-color: #366e5d;
+    color: #ffffff;
+    font-weight: 700;
+}
+.wpct-tab{
+    display: none;
+}
+.wpct-tab h2{
+    color: rgba(0,0,0,.7);
+}
+.wpct-tab p{
+    color: rgba(0,0,0,0.6);
+    text-align: justify;
+}
+.wpct-tab-active{
+    display: block;
+}
+.wpct-pls-wait
+{
+    display: block;
+    text-align: left;
+    width: 100%;
+    font-size: 16px;
+    color: green;
+    font-weight: 700;
+}
+
+/* Loader */
+#wpct-setting-container.loader
+{
+    filter: blur(5px);
+    pointer-events: none;
+}
+.wpct-tab-container-heading
+{
+    width: 100%;
+    margin: auto;
+    padding: 0px 0px 30px 0px;
+    font-size: 1.5em;
+}
+
+.wpct-tab p{
+    position: relative;
+    font-weight: 700;
+}
+.wpct-tab p:after {
+    position: absolute;
+    bottom: -10px;
+    width: 100%;
+    height: 1px;
+    background: #000;
+    content: "";
+    display: block;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+.wpct-tab h2
+{
+    margin-top: 30px;
+}
+
+a.wpct-remove-btn {
+    padding: 3px;
+    background: red;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 10px;
+    font-size: 11px;
+}
+
+.wpct-tab-container img{
+    background-color: #fff;
+    padding: 20px;
+    margin: 5px;
+}
+
+.wpct-tab-container .wpct-our-plugins-wrap img.wpct-plugin-icon{
+    width: 128px;
+}
+.wpct-our-plugins-wrap
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.wpct-our-plugins-wrap p
+{
+    text-align: unset;
+}
+.wpct-our-plugins-wrap p:after {
+   content: none;
+   position: unset;
+}
+.wpct-entry-wrap{
+    display: flex;
+    /*padding: 0 20px 0 0;*/
+}
+.wpct-our-plugins-wrap .wpct-plugin-card{
+    background-color: #fff;
+    margin-bottom: 20px;
+    width: calc(50% - 20px);
+}
+.wpct-our-plugins-wrap .wpct-plugin-card img
+{
+    padding: 5px;
+}
+.wpct-our-plugins-wrap .wpct-plugin-card footer { 
+    padding: 10px 20px; 
+    display: flex;
+    justify-content: space-between;
+}
+.wpct-entry-title a{  text-decoration: none; }
+.wpct-tab-menu ul li a.wpct-our-plugins-btn
+{
+    background-color: #d3e55d;
+}
+.wpct-entry-thumbnail a { display: block; }
+.wpct-waiting-msg
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+    font-size: 3em;
+    font-weight: 300;
+    transform: translate(-50%, -50%);
+    letter-spacing: 5px;
+}
+
+.wpct-waiting-msg span {
+    animation: animate 3s linear infinite;
+}
+.wpct-waiting-msg span:nth-child(1) {
+    animation-delay: 0s;
+}
+.wpct-waiting-msg span:nth-child(2) {
+    animation-delay: 0.1s;
+}
+.wpct-waiting-msg span:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+@keyframes animate {
+    0% {
+        filter: blur(0);
+    }
+
+    40% {
+        filter: blur(20px);
+    }
+
+    80% {
+        filter: blur(0);
+    }
+
+    100% {
+        filter: blur(0);
+    }
+}
+@media screen and (max-width:1200px)  { 
+    .wpct-tab-container
+    {
+        margin: 0;
+    }
+
+    .wpct-entry-thumbnail
+    {
+        width: 30%;
+    }
+    .wpct-entry
+    {
+        width: 70%;
+    }
+    .wpct-tab-container .wpct-our-plugins-wrap img.wpct-plugin-icon{
+        width: 90px;
+    }
+
+}
